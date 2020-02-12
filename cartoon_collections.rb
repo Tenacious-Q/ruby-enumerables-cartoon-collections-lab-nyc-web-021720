@@ -6,23 +6,27 @@ def summon_captain_planet(planeteer_calls)
   planeteer_calls.collect {|call| "#{call.capitalize}!"}
 end
 
-#def long_planeteer_calls(calls)
-#  calls.any? do |call| call.length > 4
-#  end
-# end
-#begin ***** ORIGINAL ATTEMPT
-
 def long_planeteer_calls(calls)
-calls.each do |x|
-  if x.length > 4
-    return true
-  else
-    return false
+  calls.any? do |call| call.length > 4
   end
 end
+
+=begin ***** ORIGINAL ATTEMPT ************
+  This version seems to work, however it gets the error:
+  'returns true if any calls are longer than 4 characters'
+  Not sure what is wrong - I'm getting a return of 'true' when I test it.
+
+def long_planeteer_calls(calls)
+  calls.each do |x|
+    if x.length > 4
+      return true
+    else
+      return false
+    end
+  end
 end
 
-#end
+=end
 
 
 def find_the_cheese# code an argument here
