@@ -8,11 +8,11 @@ end
 
 def long_planeteer_calls(calls)
   #
-  calls.each do |x|
-    if x.length > 4
+  calls.each do |call|
+    if call.length > 4
       return true
     else
-        return false
+      return false
     end
   end
 end
