@@ -6,11 +6,24 @@ def summon_captain_planet(planeteer_calls)
   planeteer_calls.collect {|call| "#{call.capitalize}!"}
 end
 
+#def long_planeteer_calls(calls)
+#  calls.any? do |call| call.length > 4
+#  end
+# end
+#begin ***** ORIGINAL ATTEMPT
+
 def long_planeteer_calls(calls)
-  #
-  calls.any? do |call| call.length > 4
+calls.each do |x|
+  if x.length > 4
+    return true
+  else
+    return false
   end
 end
+end
+
+#end
+
 
 def find_the_cheese# code an argument here
   # the array below is here to help
